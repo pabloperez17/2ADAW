@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <script src="funciones.js"></script>
+    <script type="text/javascript"> alert("Alert sin funcion");</script>
+    <script type="text/javascript">function sacar_alert() {alert("Hola");}</script>
+</head>
+
+<body>
+    <h1>Ejercicio 1</h1>
+    <p>Añadir a una pagina HTML un script que muestre un alert de la siguiente forma:<br>
+        a. Añadimos el alert de forma interna sin función.<br>
+        b. Añadimos el alert en un evento en un botón.<br>
+        c. Igual que el punto anterior pero usamos una función.<br>
+        d. Igual pero la función en un archivo externo.</p>
+    <button onclick="alert('hola')">Ver alert</button>
+    <br><br>
+    <button onclick="sacar_alert()">Sacar alert desde una funcion</button>
+    <br><br>
+    <button onclick="alert_desde_funcion()">Sacar alert desde una funcion en otro archivo</button>
+</body>
+
+</html>

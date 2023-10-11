@@ -1,0 +1,18 @@
+table {
+    border-collapse: collapse;
+    width: 200px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    font-size: 20px;
+}
+tr:nth-child(even) {
+    background-color: lightskyblue;
+}
+tr:nth-child(2n + 1) {
+    background-color: lightcyan;
+}
+tr:first-child {
+    background-color: lightgray;
+}

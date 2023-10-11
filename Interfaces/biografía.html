@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Pérez</title>
+</head>
+<body>
+    <h1>Índice</h1>
+        <ol>
+            <a href = "#SobreMi"><li>Sobre mi</li></a>
+            <a href = "#Aficciones"><li>Aficciones</li></a>
+            <a href = "#Ciudades"><li>Ciudades que he visitado</li></a>
+            <a herf = "#Formulario"><li>Formulario</li></a>
+        </ol>
+
+    <h2 id = SobreMi>Sobre mi</h2>
+        <p>Hola me llamo Pablo Pérez tengo 20 años y estoy estudiando un grado superior de desarrollo de aplicaciones web (DAW) en el Medac. En cuanto a lo más personal me considero una persona <b>responsable, trabajador</b> y también me gusta <b>trabajar en equipo</b> creo que es donde mejor me adapto y más puedo rendir.</p>
+
+    <h2 id = Aficciones>Aficciones</h2>
+    <table width="80%" border="1">
+        <caption>Tabla de Aficiones</caption>
+        <thead>
+            <tr>
+                <th>Afición</th>
+                <th>Descripción</th>
+                <th>Página Web</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src = "https://www.latercera.com/resizer/TiU6ognMAfRSJQY6u8ie6st5cxU=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/XPCGMOURTVFWXFVHHWKGGWLS2Y.jpg" height="75px" width="80px"></td>
+                <td>El fútbol es un deporte que se practica entre dos equipos de once jugadores que tratan de introducir un balón en la portería del contrario impulsándolo con los pies, la cabeza o cualquier parte del cuerpo excepto las manos y los brazos; en cada equipo hay un portero, que puede tocar el balón con las manos, aunque solamente dentro del área; vence el equipo que logra más goles durante los 90 minutos que dura el encuentro.</td>
+                <td><a href="https://es.wikipedia.org/wiki/F%C3%BAtbol" target="_blank">Más información</a></td>
+            </tr>
+            <tr>
+                <td><img src = "https://m.media-amazon.com/images/I/71jn1dnqlpL.__AC_SX300_SY300_QL70_ML2_.jpg" height="75px" width="80px"></td>
+                <td>La música es un arte que se basa en la combinación de sonidos y silencios, utilizando diferentes instrumentos y técnicas para crear una obra sonora.</td>
+                <td><a href="https://es.wikipedia.org/wiki/M%C3%BAsica" target="_blank">Más información</a></td>
+            </tr>
+            <tr>
+                <td><img src = "https://d26itsb5vlqdeq.cloudfront.net//image/3A203E31-AF91-4A97-96F3B23C85C04010" height="75px" width="80px"></td>
+                <td>El juego de pádel consiste en pasar la pelota al campo contrario con ayuda de la raqueta agarrada con la mano, sin utilizar otras partes del cuerpo. De esta forma, dos personas se colocan en un campo y otras dos en el otro, y las parejas se enfrentan entre ellas.</td>
+                <td><a href="https://es.wikipedia.org/wiki/P%C3%A1del" target="_blank">Más información</a></td>
+            </tr>
+            <tr>
+                <td><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2338770/header.jpg?t=1694453634" height="75px" width="80px"></td>
+                <td>Los videojuegos son una forma de entretenimiento que se basa en la interacción del usuario con un programa informático, permitiéndole controlar un personaje o situación virtual.</td>
+                <td><a href="https://es.wikipedia.org/wiki/Videojuego" target="_blank">Más información</a></td>
+            </tr>
+            <tr>
+                <td><img src = "https://statics-cuidateplus.marca.com/cms/styles/natural/azblob/dormir-solo.jpg.webp?itok=xp2RlgCU" height="75px" width="80px"></td>
+                <td>Dormir es el acto de reposar en un estado inconsciente en el que se produce la suspensión de las funciones sensoriales y de los movimientos voluntarios del cuerpo.</td>
+                <td><a href="https://es.wikipedia.org/wiki/Sue%C3%B1o#:~:text=Dormir%20es%20el%20acto%20de,los%20movimientos%20voluntarios%20del%20cuerpo." target="_blank">Más información</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id = Ciudades>Ciudades que he visitado</h2>
+    <div>
+        <ul>
+            <a href="https://es.wikipedia.org/wiki/Par%C3%ADs"><li>Paris</li></a>
+            <a href="https://es.wikipedia.org/wiki/Madrid"><li>Madrid</li></a>
+            <a href="https://es.wikipedia.org/wiki/Albufeira"><li>Albufeira</li></a>
+            <a href="https://es.wikipedia.org/wiki/Santiago_de_Compostela"><li>Santiago de Compostela</li></a>
+        </ul>
+    </div>
+
+    <h2 id = "Formulario ">Formulario</h2>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Información Personal</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" maxlength="20" required>
+                <br>
+
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                <br>
+
+                <label for="hora_fecha">Hora y Fecha:</label>
+                <input type="datetime-local" id="hora_fecha" name="hora_fecha" required>
+                <br>
+
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+
+                <label for="archivo">Archivo:</label>
+                <input type="file" id="archivo" name="archivo">
+                <br>
+
+                <label for="mes">Mes:</label>
+                <input type="month" id="mes" name="mes" required>
+                <br>
+
+                <label for="semana">Semana:</label>
+                <input type="week" id="semana" name="semana" required>
+                <br>
+
+                <label for="numero">Número:</label>
+                <input type="number" id="numero" name="numero" required>
+                <br>
+
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" 
+                name="contraseña" required>
+                <br><br>
+                
+
+                <label>Género:</label><br>
+                <input type="radio" id="masculino" name="genero" value="Masculino"> <label for="masculino">Masculino</label>
+                <input type="radio" id="femenino" name="genero" value="Femenino"> <label for="femenino">Femenino</label>
+                <br><br>
+
+                <label for="rango">Rango:</label>
+                <input type="range" id="rango" name="rango">
+                <br><br>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+                <br><br>
+
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+                <br><br>
+
+                <label for="sitio_web">Sitio Web:</label>
+                <input type="url" id="sitio_web" name="sitio_web">
+                <br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferencias</legend>
+                <label for="opcion1">Select:</label>
+                <select id="opcion1" name="opcion1">
+                    <option value="opcion1">Opción 1</option>
+                    <option value="opcion2">Opción 2</option>
+                    <option value="opcion3" selected>Opción 3</option>
+                </select><br><br>
+
+                <label for="comentarios">Comentarios:</label><br>
+                <textarea id="comentarios" name="comentarios" cols="60" rows="15" maxlength="200"></textarea><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Información del html</legend>
+                <label for="comentarios">¿Que te ha parecido la página?</label><br>
+                <textarea id="comentarios" name="comentarios" cols="50" rows="10" ></textarea><br>
+            </fieldset>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
