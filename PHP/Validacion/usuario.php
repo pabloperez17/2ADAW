@@ -41,7 +41,9 @@
     ?>
     <form action="" method="post">
         <fieldset>
-            <legend><h3>USUARIO</h3></legend>
+            <legend>
+                <h3>USUARIO</h3>
+            </legend>
             <label>Nombre: </label>
             <input type="text" name="usuario">
             <?php if (isset($error_nombre)) echo $error_nombre ?>
@@ -50,14 +52,14 @@
             <input type="text" name="apellido">
             <?php if (isset($error_apellido)) echo $error_apellido ?>
             <br><br>
-            <label>Edad: </label>
+            <label>Fecha de nacimiento: </label>
             <input type="date" name="edad">
             <?php if (isset($error_edad)) echo $error_edad ?>
             <br><br>
             <input type="submit" value="Registrarse">
             <br><br>
             <?php
-             if (preg_match($patron, $temp_nombre)) {
+            if (preg_match($patron, $temp_nombre)) {
                 $nombre = $temp_nombre;
                 $nombre = ucwords($nombre, " ");
                 echo  "Nombre: " . $nombre;
