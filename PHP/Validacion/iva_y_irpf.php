@@ -39,7 +39,7 @@
         }
     }
     ?>
-    <div class="container">
+    <div>
         <fieldset>
             <legend><h1>Formulario IVA</h1></legend>
             <form method="post" action="">
