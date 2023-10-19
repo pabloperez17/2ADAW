@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <title>Calculadora</title>
+    <script src="app1.js"></script>
+    <link rel="stylesheet" href="/proyecto/css/main.css">
+    <link rel="stylesheet" href="/proyecto/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="social">
+            <div class="social-icons">
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-youtube"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-linkedin"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <nav class="nav">
+            <div class="nav-logo">
+                <a href="index1.html">
+                    <img src="/proyecto/fotogit.jpg"  alt="Logo de la pagina">
+                </a>
+            </div>
+            <div class="nav-link">
+                <a href="profile.html">Información sobre mi</a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Aplicación de Calculadora</h1>
+        <form id="formulario">
+            <div>
+                <label for="operandoA" class="form-label">operando A: </label>
+                <input type="number" placeholder="Escribe el operando A" id="operandoA" class="form-control">
+            </div>
+            <br>
+            <div>
+                <label for="operandoB" class="form-label">operando B: </label>
+                <input type="number" placeholder="Escribe el operando B" id="operandoB" class="form-control">
+            </div>
+            <br><br>
+        </form>
+        <!--Sacamos fuera del formulario para que no se ejecute POST-->
+        <button type="submit" class="btn btn-primary" onclick="Sumar()">Sumar</button>
+        <button type="submit" class="btn btn-secondary" onclick="Restar()">Restar</button>
+        <button type="submit" class="btn btn-danger" onclick="Multiplicar()">Multiplicar</button>
+        <button type="submit" class="btn btn-success" onclick="Dividir()">Dividir</button>
+        <!--<button onclick="Potencia()">Potencia</button>
+        <button onclick="Modulo()">Módulo</button>
+        <button onclick="Incremento()">Incremento</button>
+        <button onclick="Decremento()">Decremento</button>-->
+        <br><br>
+        <div id="resultado"></div>
+    </div>
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+<footer>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde nihil, blanditiis saepe minus mollitia ullam repellat fuga suscipit vero</p>
+</footer>
+</html>

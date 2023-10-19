@@ -5,3 +5,45 @@
 .boton__grande { font-size: 20px; }
 
 .boton__desactivado { cursor: not-allowed; opacity: 0.5; }
+
+.button{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    height: 100px;
+    border: 3px solid black;
+}
+
+.parrafo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+
+.lineaBase{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    height: 200px;
+    border:  3px solid black;
+}
+
+.estirar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.estirarRojo{background-color: red;}
+
+.estirarVerde{background-color: green;}
+
+.estirarAzul{background-color: blue;}
