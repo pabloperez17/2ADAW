@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuario</title>
+    <?php require '../Funciones/base_de_datos.php' ?>
 </head>
 <body>
     <?php
@@ -132,6 +133,10 @@
         echo "<h3>Nombre: $nombre</h3>";
         echo "<h3>Apellidos: $apellidos</h3>";
         echo "<h3>Fecha de nacimiento: $fecha_nacimiento</h3>";
+
+        $sql = "INSERT INTO usuarios (usuario, nombre, apellido, fecha_nacimiento) VALUES ('$usuario', '$nombre', '$apellidos', '$fecha_nacimiento')";
+
+        $conexion -> query($sql);
     }
     ?>
 </body>
