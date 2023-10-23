@@ -50,7 +50,16 @@
     }
 
     #   Validación fecha de estreno
-
+    if(strlen($temp_fecha_estreno) == 0) {
+        $err_fecha_estreno = "La fecha de estreno es obligatoria";
+    } else {
+        list($anyo, $mes, $dia) = explode('-', $temp_fecha_estreno);
+        if($anyo < 1895) {
+            $err_fecha_estreno = "No puede es anterior a la primera pelicula";
+        } else {
+            $fecha_estreno = $temp_fecha_estreno;
+        }
+    }
     ?>
     <form action="" method="post">
         <fieldset>
