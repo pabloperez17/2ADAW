@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica 1</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -21,28 +23,24 @@
             </div>
         </div>
         <nav class="nav">
-            <div class="nav-logo">
-                <a href="index1.html">
-                    <img src="fotogit.jpg" alt="Logo de la pagina">
-                </a>
-            </div>
-            <div class="nav-link">
-                <a href="proyectos.html">Ir a proyectos</a>
-            </div>
+            <ul>
+                <li><a href="#">Informacion sobre mi</a></li>
+                <li><a href="#">Aficciones</a></li>
+                <li><a href="#">Ciudades que he visitado</a></li>
+                <li><a href="#">Enlaces a sitios de interés</a></li>
+                <li><a href="#">Actividaes recientes</a></li>
+                <li><a href="#">Galería de imagenes</a></li>
+            </ul>
         </nav>
     </header>
     <main class="proyectos-main">
         <section class="proyectoPrincipal-section">
             <div class="proyectoPrincipal-content">
                 <h3>Información sobre mi</h3>
-                <img src="fotomamota.jpg" alt="img de proyectos">
+                <img src="./foto_info_personal.png" alt="img de proyectos">
                 <div class="proyectoPrincipal-info">
                     <h2>Pablo Pérez Iza</h2>
-                    <p>Hola me llamo Pablo Pérez tengo 20 años y estoy estudiando un grado superior de desarrollo de
-                        aplicaciones web (DAW) en el Medac. En cuanto a lo más personal me considero una persona
-                        <b>responsable, trabajador</b> y también me gusta <b>trabajar en equipo</b> creo que es donde
-                        mejor me adapto y más puedo rendir.</p>
-                    <a class="proyectos-btn" href="proyectoTFG.html">Leer mas</a>
+                    <p>Hola me llamo Pablo Pérez tengo 20 años y estoy estudiando un grado superior de desarrollo de aplicaciones web (DAW) en el Medac. En cuanto a lo más personal me considero una persona responsable, trabajador y también me gusta trabajar en equipo creo que es donde mejor me adapto y más puedo rendir.</p>
                 </div>
             </div>
         </section>
@@ -50,81 +48,111 @@
             <h3>Aficciones</h3>
             <div class="proyectos-book">
                 <h4>Futbol</h4>
-                <img src="https://www.latercera.com/resizer/TiU6ognMAfRSJQY6u8ie6st5cxU=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/XPCGMOURTVFWXFVHHWKGGWLS2Y.jpg"
-                    alt="">
-                <p>El fútbol es un deporte que se practica entre dos equipos de once jugadores que tratan de introducir
-                    un balón en la portería del contrario impulsándolo con los pies, la cabeza o cualquier parte del
-                    cuerpo excepto las manos y los brazos; en cada equipo hay un portero, que puede tocar el balón con
-                    las manos, aunque solamente dentro del área; vence el equipo que logra más goles durante los 90
-                    minutos que dura el encuentro.</p>
+                <img src="https://www.latercera.com/resizer/TiU6ognMAfRSJQY6u8ie6st5cxU=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/XPCGMOURTVFWXFVHHWKGGWLS2Y.jpg" alt="">
+                <p>El fútbol es un deporte que se practica entre dos equipos de once jugadores que tratan de introducir un balón en la portería del contrario impulsándolo con los pies, la cabeza o cualquier parte del cuerpo excepto las manos y los brazos.</p>
                 <a class="proyectos-btn" href="https://es.wikipedia.org/wiki/F%C3%BAtbol" target="_blank">Leer mas</a>
             </div>
             <div class="proyectos-book">
                 <h4>Musica</h4>
                 <img src="https://m.media-amazon.com/images/I/71jn1dnqlpL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="">
-                <p>La música es un arte que se basa en la combinación de sonidos y silencios, utilizando diferentes
-                    instrumentos y técnicas para crear una obra sonora.</p>
+                <p>La música es un arte que se basa en la combinación de sonidos y silencios, utilizando diferentes instrumentos y técnicas para crear una obra sonora.</p>
                 <a class="proyectos-btn" href="https://es.wikipedia.org/wiki/M%C3%BAsica" target="_blank">Leer mas</a>
             </div>
             <div class="proyectos-book">
                 <h4>Padel</h4>
                 <img src="https://d26itsb5vlqdeq.cloudfront.net//image/3A203E31-AF91-4A97-96F3B23C85C04010" alt="">
-                <p>El juego de pádel consiste en pasar la pelota al campo contrario con ayuda de la raqueta agarrada con
-                    la mano, sin utilizar otras partes del cuerpo. De esta forma, dos personas se colocan en un campo y
-                    otras dos en el otro, y las parejas se enfrentan entre ellas.</p>
+                <p>El juego de pádel consiste en pasar la pelota al campo contrario con ayuda de la raqueta agarrada con la mano, sin utilizar otras partes del cuerpo. De esta forma, dos personas se colocan en un campo y otras dos en el otro, y las parejas se enfrentan entre ellas.</p>
                 <a class="proyectos-btn" href="https://es.wikipedia.org/wiki/P%C3%A1del" target="_blank">Leer mas</a>
             </div>
             <div class="proyectos-book">
                 <h4>Videojuegos</h4>
                 <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2338770/header.jpg?t=1694453634" alt="">
-                <p>Los videojuegos son una forma de entretenimiento que se basa en la interacción del usuario con un
-                    programa informático, permitiéndole controlar un personaje o situación virtual.</p>
+                <p>Los videojuegos son una forma de entretenimiento que se basa en la interacción del usuario con un programa informático, permitiéndole controlar un personaje o situación virtual.</p>
                 <a class="proyectos-btn" href="https://es.wikipedia.org/wiki/Videojuego" target="_blank">Leer mas</a>
             </div>
             <div class="proyectos-book">
                 <h4>Dormir</h4>
-                <img src="https://statics-cuidateplus.marca.com/cms/styles/natural/azblob/dormir-solo.jpg.webp?itok=xp2RlgCU"
-                    alt="">
-                <p>Dormir es el acto de reposar en un estado inconsciente en el que se produce la suspensión de las
-                    funciones sensoriales y de los movimientos voluntarios del cuerpo.</p>
-                <a class="proyectos-btn"
-                    href="https://es.wikipedia.org/wiki/Sue%C3%B1o#:~:text=Dormir%20es%20el%20acto%20de,los%20movimientos%20voluntarios%20del%20cuerpo."
-                    target="_blank">Leer mas</a>
+                <img src="https://statics-cuidateplus.marca.com/cms/styles/natural/azblob/dormir-solo.jpg.webp?itok=xp2RlgCU" alt="">
+                <p>Dormir es el acto de reposar en un estado inconsciente en el que se produce la suspensión de las funciones sensoriales y de los movimientos voluntarios del cuerpo.</p>
+                <a class="proyectos-btn" href="https://es.wikipedia.org/wiki/Sue%C3%B1o#:~:text=Dormir%20es%20el%20acto%20de,los%20movimientos%20voluntarios%20del%20cuerpo." target="_blank">Leer mas</a>
             </div>
             <div class="proyectos-book">
                 <h4>Dibujar</h4>
-                <img src="https://www.motociclismo.es/uploads/s1/11/69/08/87/dibujo-de-motocicletas-para-colorear_2_790x454.jpeg"
-                    alt="">
-                <p>Dibujar es representar figuras de personas, animales o cosas en una superficie mediante líneas
-                    trazadas con los útiles e instrumentos adecuados, como lápiz, papel, carboncillo compás o regla,
-                    entre otros.</p>
+                <img src="https://www.motociclismo.es/uploads/s1/11/69/08/87/dibujo-de-motocicletas-para-colorear_2_790x454.jpeg" alt="">
+                <p>Dibujar es representar figuras de personas, animales o cosas en una superficie mediante líneas trazadas con los útiles e instrumentos adecuados, como lápiz, papel, carboncillo compás o regla, entre otros.</p>
                 <a class="proyectos-btn" href="https://es.wikipedia.org/wiki/Dibujo">Leer mas</a>
             </div>
         </section>
         <section>
-            <h2 id=Ciudades>Ciudades que he visitado</h2>
-            <div>
-                <ul>
-                    <a href="https://es.wikipedia.org/wiki/Par%C3%ADs">
-                        <li>Paris</li>
-                    </a>
-                    <a href="https://es.wikipedia.org/wiki/Madrid">
-                        <li>Madrid</li>
-                    </a>
-                    <a href="https://es.wikipedia.org/wiki/Albufeira">
-                        <li>Albufeira</li>
-                    </a>
-                    <a href="https://es.wikipedia.org/wiki/Santiago_de_Compostela">
-                        <li>Santiago de Compostela</li>
-                    </a>
-                </ul>
+            <div class = "container shadow p-3 mb-5 bg-body rounded">
+                <h2 id = "ciudades">Ciudades que he visitado</h2>
+                <div>
+                    <ul class = "list-group">
+                        <li class="list-group-item"><a href="https://es.wikipedia.org/wiki/Par%C3%ADs">Paris</a></li>
+                        <li class="list-group-item"><a href="https://es.wikipedia.org/wiki/Madrid">Madrid</a></li>
+                        <li class="list-group-item"><a href="https://es.wikipedia.org/wiki/Albufeira">Albufeira</a></li>
+                        <li class="list-group-item"><a href="https://es.wikipedia.org/wiki/Santiago_de_Compostela">Santiago de Compostela</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class = "container shadow p-3 mb-5 bg-body rounded">
+                <h2>Enlace a sitios de interés</h2>
+                <div>
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="https://github.com/">Github</a></li>
+                        <li class="list-group-item"><a href="https://getbootstrap.com/">Bootstrap</a></li>
+                        <li class="list-group-item"><a href="https://www.w3.org/">W3C</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class = "container shadow p-3 mb-5 bg-body rounded">
+                <h2>Actividades recientes</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nº</th>
+                            <th scope="col">Actividad</th>
+                            <th scope="col">Dia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Ir al cine</td>
+                            <td>20/10/2023</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Ir a jugar al futbol</td>
+                            <td>22/10/2023</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Ir a cenar</td>
+                            <td>24/10/2023</td>
+                            </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Jugar al fifa</td>
+                            <td>15/10/2023</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Ir al gimnasio</td>
+                            <td>26/10/2023</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
 </body>
 <footer>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde nihil, blanditiis saepe minus mollitia ullam
-        repellat fuga suscipit vero facere nostrum ut, illo obcaecati amet incidunt deserunt natus placeat impedit!</p>
+    <p>Pablo Pérez Iza</p>
 </footer>
 
 </html>
