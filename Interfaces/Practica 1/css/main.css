@@ -111,7 +111,7 @@ body{
     width: 60%;
     display: inline-block;
     margin: 20px 0;
-    border-radius: 1rem;
+    border-radius: 2rem;
 }
 
 .proyectoPrincipal-info{
@@ -159,10 +159,12 @@ body{
 .proyectos-book img{
     width: 100%;
     height: 20rem;
+    border-radius: 2rem;
 }
 
 .proyectos-book h4{
     margin: 20px 0;
+    text-align: center;
 }
 
 .proyectos-book p{
