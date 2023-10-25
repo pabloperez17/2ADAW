@@ -40,8 +40,7 @@ body{
     justify-content: space-between;
     justify-self: self-end;
     margin-top: 5px;
-    margin-right: 5%;
-    margin-left: 83%;
+    margin-left: 0.5%;
 }
 
 .social-icons a{
@@ -63,7 +62,7 @@ body{
 .nav ul{
     list-style: none;
     text-decoration: none;
-    margin-left: 18%;
+    margin-left: 0.5%;
 }
 
 .nav >ul>li{
@@ -94,9 +93,9 @@ body{
 }
 
 
-/*Página de Proyectos */
+/*Perfil */
 .proyectoPrincipal-section{
-    background-color: lightgrey;
+    background-color: rgb(182, 250, 211);
 }
 
 .proyectoPrincipal-content{
@@ -104,6 +103,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr;
+    padding-top: 50px;
 }
 
 .proyectoPrincipal-content img{
@@ -111,6 +111,7 @@ body{
     width: 60%;
     display: inline-block;
     margin: 20px 0;
+    border-radius: 1rem;
 }
 
 .proyectoPrincipal-info{
@@ -134,7 +135,11 @@ body{
     font-size: 14px;
 }
 
-/* Section de los Proyectos Individuales*/
+#aficciones{
+    margin-top: 2%;
+}
+
+/* Section de las aficciones individuales*/
 .proyecto-section{
     padding: 10px 80px 40px;
 }
@@ -164,6 +169,21 @@ body{
     margin-bottom: 30px;
 }
 
+.ciudades_visitadas >ul>li>a {
+    color: black;
+} 
+
+.ciudades_visitadas >ul :hover {
+    background-color: lightgray;
+} 
+
+.sitios_interes >ul>li>a {
+    color: black;
+} 
+
+.sitios_interes >ul :hover {
+    background-color: lightgray;
+} 
 
 /*footer*/
 footer{

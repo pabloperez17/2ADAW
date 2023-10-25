@@ -24,17 +24,17 @@
         </div>
         <nav class="nav">
             <ul>
-                <li><a href="#">Informacion sobre mi</a></li>
-                <li><a href="#">Aficciones</a></li>
-                <li><a href="#">Ciudades que he visitado</a></li>
-                <li><a href="#">Enlaces a sitios de interés</a></li>
-                <li><a href="#">Actividaes recientes</a></li>
-                <li><a href="#">Galería de imagenes</a></li>
+                <li><a href="#info">Informacion sobre mi</a></li>
+                <li><a href="#aficiones">Aficciones</a></li>
+                <li><a href="#ciudades">Ciudades que he visitado</a></li>
+                <li><a href="#enlaces">Enlaces a sitios de interés</a></li>
+                <li><a href="#actividades">Actividaes recientes</a></li>
+                <li><a href="#galeria">Galería de imagenes</a></li>
             </ul>
         </nav>
     </header>
     <main class="proyectos-main">
-        <section class="proyectoPrincipal-section">
+        <section class="proyectoPrincipal-section" id="info">
             <div class="proyectoPrincipal-content">
                 <h3>Información sobre mi</h3>
                 <img src="./foto_info_personal.png" alt="img de proyectos">
@@ -44,7 +44,7 @@
                 </div>
             </div>
         </section>
-        <section class="proyecto-section">
+        <section class="proyecto-section" id="aficciones">
             <h3>Aficciones</h3>
             <div class="proyectos-book">
                 <h4>Futbol</h4>
@@ -83,10 +83,10 @@
                 <a class="proyectos-btn" href="https://es.wikipedia.org/wiki/Dibujo">Leer mas</a>
             </div>
         </section>
-        <section>
+        <section id = "ciudades">
             <div class = "container shadow p-3 mb-5 bg-body rounded">
-                <h2 id = "ciudades">Ciudades que he visitado</h2>
-                <div>
+                <h2>Ciudades que he visitado</h2>
+                <div class="ciudades_visitadas">
                     <ul class = "list-group">
                         <li class="list-group-item"><a href="https://es.wikipedia.org/wiki/Par%C3%ADs">Paris</a></li>
                         <li class="list-group-item"><a href="https://es.wikipedia.org/wiki/Madrid">Madrid</a></li>
@@ -96,10 +96,10 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="enlaces"> 
             <div class = "container shadow p-3 mb-5 bg-body rounded">
                 <h2>Enlace a sitios de interés</h2>
-                <div>
+                <div class="sitios_interes">
                     <ul class="list-group">
                         <li class="list-group-item"><a href="https://github.com/">Github</a></li>
                         <li class="list-group-item"><a href="https://getbootstrap.com/">Bootstrap</a></li>
@@ -108,7 +108,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="actividades">
             <div class = "container shadow p-3 mb-5 bg-body rounded">
                 <h2>Actividades recientes</h2>
                 <table class="table table-striped">
@@ -152,7 +152,7 @@
     </main>
 </body>
 <footer>
-    <p>Pablo Pérez Iza</p>
+    <p><a href="#info">Pablo Pérez Iza</a></p>
 </footer>
 
 </html>
