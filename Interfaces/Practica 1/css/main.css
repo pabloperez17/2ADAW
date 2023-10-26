@@ -21,35 +21,9 @@ body{
 /* Header */
 .header{
     width: 100%;
-    height: 80px;
+    height: 40px;
     display: grid;
     grid-template-rows: 1fr 1fr;
-}
-
-.social{
-    background-color: lightgreen;
-    width: 100%;
-    height: 50px;
-}
-
-.social-icons{
-    width: 300px;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    justify-self: self-end;
-    margin-top: 5px;
-    margin-left: 0.5%;
-}
-
-.social-icons a{
-    color: black;
-    font-size: 28px;
-}
-
-.social-icons a:hover{
-    color: lightgrey;
 }
 
 .nav{
@@ -139,6 +113,18 @@ body{
     margin-top: 2%;
 }
 
+#ciudades{
+    background-color: lightgreen !important;
+}
+
+#enlaces{
+    background-color: lightgreen !important;
+}
+
+#actividades{
+    background-color: lightgreen !important;
+}
+
 /* Section de las aficciones individuales*/
 .proyecto-section{
     padding: 10px 80px 40px;
@@ -177,7 +163,7 @@ body{
 } 
 
 .ciudades_visitadas >ul :hover {
-    background-color: lightgray;
+    background-color: rgb(182, 250, 211);
 } 
 
 .sitios_interes >ul>li>a {
@@ -186,13 +172,12 @@ body{
 } 
 
 .sitios_interes >ul :hover {
-    background-color: lightgray;
+    background-color: rgb(182, 250, 211);
 } 
 
 /*footer*/
 footer{
     width: 100%;
-    height: 75px;
     background-color: lightgreen;
     justify-content: center;
 }
@@ -200,5 +185,29 @@ footer{
 footer p{
     color: black;
     text-align: center;
-    padding-top: 25px;
+}
+
+.social{
+    background-color: lightgreen;
+    width: 100%;
+}
+
+.social-icons{
+    width: 350px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-self: self-end;
+    margin-top: 5px;
+    margin-left: 0.5%;
+}
+
+.social-icons a{
+    color: black;
+    font-size: 28px;
+}
+
+.social-icons a:hover{
+    color: lightgrey;
 }
