@@ -56,6 +56,7 @@ function factorial(int $numfact){
     }while($numfact < 1);
     return $suma;
 }
+
 //EJERCICIO 3
 function comprobarEstado(int $numeroEspecies) : string {
     if($numeroEspecies == 0){
