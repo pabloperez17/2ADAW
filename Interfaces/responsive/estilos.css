@@ -1,0 +1,124 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+#container{
+    width: 70%;
+    background: gray;
+    margin: 0px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+header{
+    width: 100%;
+    height: 150px;
+    background-color: lightseagreen;
+    color: #333;
+    line-height: 150px;
+    text-align: center;
+}
+
+aside{
+    width: 25%;
+    float: left;
+    background-color: #ccc;
+    min-height: 750px;
+    text-align: center;
+    line-height: 750px;
+}
+
+#articles{
+    width: 75%;
+    min-height: 750px;
+    float: left;
+    background-color: lemonchiffon;
+}
+
+#articles article{
+    width: 30%;
+    height: 150px;
+    background-color: blue;
+    color : white;
+    line-height: 50px;
+    text-align: center;
+    border: 2px solid black;
+    overflow: hidden;
+    float: left;
+    margin: 15px;
+}
+
+/* Aplico @media */
+@media (max-width: 1942px){
+    #articles article{
+        width: 29.8%;
+        background-color: red;
+    }
+}
+@media (max-width: 1832px){
+    #articles article{
+        width: 29.5%;
+        background-color: red;
+    }
+}
+@media (max-width: 1690px){
+    #articles article{
+        width: 45%;
+        background-color: green;
+    }
+    aside{
+        height: 1105px;
+    }
+}
+@media (max-width: 1294px){
+    #articles article{
+        width: 44%;
+        background-color: yellow;
+    }
+}
+
+@media (max-with: 850px) {
+    aside h2{
+        font-size: 1.1vw;
+    }
+}
+
+@media (max-with: 810px) {
+    #article articles{
+        width: 40%;
+        background-color: blue;
+    }
+}
+
+/* Vista móvil */
+@media (max-width: 650px){
+    #container{
+        overflow: hidden;
+    }
+    aside{
+        float: none;
+        min-width: auto;
+        height: 40px;
+        line-height: 20px;
+        width: 100%;
+        padding: 20px;
+    }
+    #articles article{
+        width: 92%;
+        height: 40px;
+        background-color: blueviolet;
+    }
+    #articles {
+        width: 100%;
+    }
+    aside h2{
+        font-size: 24px;
+    }
+}
