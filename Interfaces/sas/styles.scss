@@ -1,0 +1,19 @@
+/* Variables */
+$fuente-tipica: sans-serif, Helvetica, Arial;
+$color-fondo: #ccc;
+$color-letra: red;
+$color-letra2: blue;
+
+
+body{
+    background-color: $color-fondo;
+}
+
+h1{
+    color: $color-letra;
+    font-family: $fuente-tipica;
+}
+
+p{
+    color: $color-letra2;
+}
