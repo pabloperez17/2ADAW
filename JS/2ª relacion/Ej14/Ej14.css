@@ -1,0 +1,10 @@
+body>ul>li{
+    background-color: lightskyblue;
+    color: darkblue;
+}
+
+li + ul{
+    background-color: lightcoral;
+    color: black;
+    display: none;
+}

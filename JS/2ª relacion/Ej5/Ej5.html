@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <link rel="stylesheet" href="Ej5.css">
+</head>
+<body>
+    <div class="uno">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, ipsum.</p>
+    </div>
+    <script>
+        document.querySelector("p").addEventListener("click",cambiarfondo);
+            function cambiarfondo(){
+            var parrafo = document.getElementsByTagName("div");
+            if(parrafo[0].className == "uno"){
+                parrafo[0].className = "dos";
+            } else {
+                parrafo[0].className = "uno";
+            }
+        }
+    </script>
+</body>
+</html>
