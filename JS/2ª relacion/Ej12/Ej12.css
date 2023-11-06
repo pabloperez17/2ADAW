@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+}
+div{
+    left: 0px;
+    position: absolute;
+}
+
+img{
+    height: 500px;
+    width: 800px;
+}
+
+input{
+    margin-top: 520px;
+}
