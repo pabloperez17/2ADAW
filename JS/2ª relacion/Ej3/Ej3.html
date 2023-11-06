@@ -5,26 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 3</title>
+    <script src="Ej3.js" defer></script>
 </head>
 <body>
-    <div style="background-color: beige;">0</div>
+    <p>0</p>
     <br>
     <button onclick="sumar()">Boton Sumar</button>
     <button onclick="restar()">Boton Restar</button>
 
 </body>
 </html>
-
-<script>
-let div = document.querySelector("div");
-function sumar() {
-    let num = parseInt(div.innerHTML);
-    num++;
-    div.innerHTML = num;
-}
-function restar() {
-    let num = parseInt(div.innerHTML);
-    num--;
-    div.innerHTML = num;
-}
-</script>

@@ -1,0 +1,40 @@
+body{
+    margin: 0px;
+}
+
+#div0{
+    background-color: lightcoral;
+    height: 100px;
+    width: 100px;
+    left: 0px;
+    position: absolute;
+    top: 50px;
+}
+
+#div1{
+    background-color: lightskyblue;
+    height: 100px;
+    width: 100px;
+    left: 0px;
+    position: absolute;
+    top: 200px;
+}
+
+#div2{
+    background-color: lightyellow;
+    height: 100px;
+    width: 100px;
+    left: 0px;
+    position: absolute;
+    top: 350px;
+}
+
+#div3{
+    background-color: lightseagreen;
+    height: 100px;
+    width: 100px;
+    left: 0px;
+    position: absolute;
+    top: 500px;
+
+}
