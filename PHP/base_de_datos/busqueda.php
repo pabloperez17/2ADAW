@@ -5,19 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Busqueda de videojugos</title>
     <?php require 'database_conection.php' ?>
-    <?php require 'index.php' ?>
+  
 </head>
 <body>
     <?php 
-    $_POST["busqueda"]
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        //PARA BUSCAR CON LAS LETRAS EXACTAS
+        /*
+        $palabras = $_POST["palabras"];
 
-        $duplicado = "SELECT * FROM videojuegos WHERE busqueda = '$titulo'";
+        $sql = "SELECT * FROM videojuegos WHERE titulo = ?";
+        $stmt = $conexion -> prepare($sql);
+        $stmt -> bind_param("s", $palabras);
+        $stmt -> execute();
+        $resultado = $stmt -> get_result();
+        $conexion -> close();
+        */
 
-        if ($conexion -> query($duplicado) -> num_rows > 0) {
-            echo" $duplicado";
-        } else {
+        //PARA BUSCAR POR PALABRAS
+        /*
+        $palabras = $_POST["palabras"] . '%' ;
+
+        $sql = ("SELECT * FROM videojuegos WHERE titulo LIKE CONCAT('%',?,'%')");
+        $stmt = $conexion -> prepare($sql);
+        $stmt -> bind_param("s", $palabras);
+        $stmt -> execute();
+        $resultado = $stmt -> get_result();
+        $conexion -> close();
+        */
+
+        //PARA BUSCAR POR FILTROS
+        $palabras = '%' . $_POST["palabras"] . '%';
+        $columna = $_POST["columna"];
+        $orden = $_POST["orden"];
+
+        $sql = ("SELECT * FROM videojuegos WHERE titulo LIKE CONCAT('%',?,'%') ORDER BY $columna $orden");
+        $stmt = $conexion -> prepare($sql);
+        $stmt -> bind_param("s", $palabras);
+        $stmt -> execute();
+        $resultado = $stmt -> get_result();
+        $conexion -> close();
+
+        if ($resultado -> num_rows === 0) {
             echo "El videojuego no esta en la lista o esta mal escrito";
+        } else {
+            while($fila = $resultado -> fetch_assoc()){
+                echo "Titulo: ". $fila["titulo"] ."<br>";
+                echo "Distribuidora: ". $fila["distribuidora"] ."<br>";
+                echo "Precio: ". $fila["precio"] ."€" . "<br><br>" ;
+            }
         } 
+    }
     ?>
 </body>
 </html>

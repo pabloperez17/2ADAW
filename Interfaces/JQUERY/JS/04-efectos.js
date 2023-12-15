@@ -56,4 +56,15 @@ $(document).ready(function(){
             marginTop: '0px'
         }, 'slow');
     });
+
+    $('#demoAnimation').click(function(){
+        marginLeft: '550px';
+        top: '300px';
+    });
+    $('#demoAnimation2').click(function(){
+        marginLeft: '700px';
+        top: '450px';
+        height: '300px';
+        width: '300px';
+    });
 });
