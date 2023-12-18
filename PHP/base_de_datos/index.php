@@ -9,17 +9,33 @@
 </head>
 <body>
     <?php
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        $titulo = '%' . $_POST["titulo"] . '%';
+        $columna = $_POST["columna"];
+        $orden = $_POST["orden"];
+
+        $sql = ("SELECT * FROM videojuegos WHERE titulo LIKE CONCAT('%',?,'%') ORDER BY $columna $orden");
+        $stmt = $conexion -> prepare($sql);
+        $stmt -> bind_param("s", $titulo);
+        $stmt -> execute();
+        $resultado = $stmt -> get_result();
+        $conexion -> close();
+    }
+
+    if($_SERVER["REQUEST_METHOD"] == "GET") {
         $sql = $conexion -> prepare("SELECT * FROM videojuegos");
         $sql -> execute();
         $resultado = $sql -> get_result();
-       
+        $conexion -> close();
+    }
+
     ?>
     <div class="container">
         <h2>Busqueda de videojuego</h2>
-        <form action="busqueda.php" method="POST">
+        <form action="" method="POST">
             <div class="row mb-3">
                 <div class="col-4">
-                    <input class="form-control" type="text" id="palabras" name="palabras">
+                    <input class="form-control" type="text" id="titulo" name="titulo">
                 </div>
                 <div class="col-2">
                     <input class="btn btn-primary" type="submit" value="Buscar">
@@ -54,6 +70,8 @@
                         <th>Titulo</th>
                         <th>Distribuidora</th>
                         <th>Precio</th>
+                        <th>Mostrar</th>
+                        <th>Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -63,7 +81,21 @@
                             echo "<td> $fila[titulo] </td>";
                             echo "<td> $fila[distribuidora] </td>";
                             echo "<td> $fila[precio] </td>";
-                            echo "</tr>";
+                            ?>
+                            <td>
+                                <form action="view_videogames.php" method="get">
+                                    <input type="hidden" name="titulo" value="<?php echo $fila["titulo"] ?>">
+                                    <input class="btn btn-secondary" type="submit" value="Ver">
+                                </form>
+                            </td>
+                            <td>
+                                <form action="delete_videogames.php" method="get">
+                                    <input type="hidden" name="titulo" value="<?php echo $fila["titulo"] ?>">
+                                    <input class="btn btn-danger" type="submit" value="Borrar">
+                                </form>
+                            </td>
+                            </tr>
+                        <?php
                         }
                         ?>
                 </tbody>
