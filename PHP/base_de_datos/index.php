@@ -13,8 +13,29 @@
         $titulo = '%' . $_POST["titulo"] . '%';
         $columna = $_POST["columna"];
         $orden = $_POST["orden"];
+        $distribuidoras = $_POST["distribuidora"] ?? "";
+        $busqueda = "titulo";
 
-        $sql = ("SELECT * FROM videojuegos WHERE titulo LIKE CONCAT('%',?,'%') ORDER BY $columna $orden");
+        if(empty($_POST["rango1"])){
+            $_POST["rango1"] = PHP_FLOAT_MIN;
+        }
+
+        if(empty($_POST["rango2"])){
+            $_POST["rango2"] = PHP_FLOAT_MAX;
+        }
+
+        if($campo == "distribuidora"){
+            $busqueda = "distribuidora";
+        }
+
+        if($distribuidoras != ""){
+            $seleccionadas = "and distribuidora in ('".implode("','",$distribuidoras)."')";
+        }
+
+        $rango1 = $_POST["rango1"];
+        $rango2 = $_POST["rango2"];
+
+        $sql = $conexion->prepare("Select * from videojuegos where $busqueda like CONCAT ('%',?,'%') and precio between $rango1 and $rango2 $seleccionadas order by $campo $orden");
         $stmt = $conexion -> prepare($sql);
         $stmt -> bind_param("s", $titulo);
         $stmt -> execute();
@@ -57,6 +78,10 @@
                         <option value="asc" selected>Ascendente</option>
                         <option value="desc">Descendente</option>
                     </select>
+                </div>
+                <div class="row mb-3">
+                    <input type="text" name="rango1" placeholder="rango 1">
+                    <input type="text" name="rango2" placeholder="rango 2">
                 </div>
             </div>
         </form>

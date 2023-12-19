@@ -12,36 +12,36 @@
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         //PARA BUSCAR CON LAS LETRAS EXACTAS
         /*
-        $palabras = $_POST["palabras"];
+        $titulo = $_POST["titulo"];
 
         $sql = "SELECT * FROM videojuegos WHERE titulo = ?";
         $stmt = $conexion -> prepare($sql);
-        $stmt -> bind_param("s", $palabras);
+        $stmt -> bind_param("s", $titulo);
         $stmt -> execute();
         $resultado = $stmt -> get_result();
         $conexion -> close();
         */
 
-        //PARA BUSCAR POR PALABRAS
+        //PARA BUSCAR POR TITULO
         /*
-        $palabras = $_POST["palabras"] . '%' ;
+        $titulo = $_POST["titulo"] . '%' ;
 
         $sql = ("SELECT * FROM videojuegos WHERE titulo LIKE CONCAT('%',?,'%')");
         $stmt = $conexion -> prepare($sql);
-        $stmt -> bind_param("s", $palabras);
+        $stmt -> bind_param("s", $titulo);
         $stmt -> execute();
         $resultado = $stmt -> get_result();
         $conexion -> close();
         */
 
         //PARA BUSCAR POR FILTROS
-        $palabras = '%' . $_POST["palabras"] . '%';
+        $titulo = '%' . $_POST["titulo"] . '%';
         $columna = $_POST["columna"];
         $orden = $_POST["orden"];
 
         $sql = ("SELECT * FROM videojuegos WHERE titulo LIKE CONCAT('%',?,'%') ORDER BY $columna $orden");
         $stmt = $conexion -> prepare($sql);
-        $stmt -> bind_param("s", $palabras);
+        $stmt -> bind_param("s", $titulo);
         $stmt -> execute();
         $resultado = $stmt -> get_result();
         $conexion -> close();
