@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery UI</title>
+    <script type="text/javascript" src="JS/jquery-3.7.1.min.js"></script>
+    <!-- Para temas de redimensionar,.. tengo que añadir los links oportunos. -->
+    <link rel="stylesheet" href="JS/jquery-ui-1.13.2/jquery-ui.min.css">
+    <link rel="stylesheet" href="JS/jquery-ui-1.13.2/jquery-ui.structure.css">
+    <link rel="stylesheet" href="JS/jquery-ui-1.13.2/jquery-ui.theme.css">
+
+    <!-- JQuery UI debo incluirlo a continuación de haber incluido JQuery -->
+    <script type="text/javascript" src="JS/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="JS/06-interface.js"></script> 
+    <style>
+        #cajas{
+            display: flex;
+            flex-flow: row wrap;
+            max-width: 900px;
+            height: 600px;
+            overflow: hidden;
+            border: 1px solid black;
+        }
+
+        .elemento{
+            width: 300px;
+            height: 200px;
+            border: 4px solid black;
+            background-color: lightblue;
+            margin: 10px;
+        }
+
+        .lista-seleccionable li{
+            width: 80%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            list-style: none;
+            cursor: pointer;
+        }
+        /* le doy unos estilos a las clases internas que utiliza este método selectable */
+        ul .ui-selecting {background-color: green; color: white}
+        ul .ui-selected {background-color: blue; color: white}
+    
+        /* para el drag and drop */
+        #elemento-movido{
+            width: 100px;
+            height: 100px;
+            border: 4px solid red;
+        }
+        #area{
+            width: 300px;
+            height: 300px;
+            border: 4px solid green;
+        }
+
+        .caja-efectos{
+            background-color: yellow;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery UI</h1>
+    <section id="cajas">
+        <div class="elemento">
+            Hola, soy un elemento de la web 1.
+        </div>
+        <div class="elemento">
+            Hola, soy un elemento de la web 2.
+        </div>
+        <div class="elemento">
+            Hola, soy un elemento de la web 3.
+        </div>
+    </section>
+    <section id="lista">
+        <!-- ahora me creo una lista para que sea seleccionable -->
+        <ul class="lista-seleccionable">
+            <li>GTA 5</li>
+            <li>Need for Speed</li>
+            <li>Fifa</li>
+            <li>Super Mario</li>
+            <li>Fornite</li>
+            <li>Minecraft</li>
+        </ul>
+    </section>
+    <section>
+        <div id="elemento-movido">
+            elemento
+        </div>
+        <br><br>
+        <div id="area">
+            area
+        </div>
+    </section>
+    <br><br>
+    <div class="caja-efectos elemento">
+        Estoy aquí.
+    </div>
+    <br><br>
+    <button id="mostrar">Mostrar</button>
+    <br><br>
+    <br><br>
+    <hr>
+    <h3>Cómo realizar un tooltip</h3>
+    <a href="#" id="mis-datos" title="Acceder a mis datos de esta web.">Mis datos</a><br>
+    <a href="#" title="Acceder a mis datos 2.">Mis datos 2</a><br>
+    <a href="#" title="Acceder a mis datos 3.">Mis datos 3</a><br>
+    <hr>
+    <h3>Cuadros de diálogo</h3>
+    <div id="popup" title="¿Estas seguro?">
+        <p>Aprenderemos JQuery - JQuery UI - AJAX</p>
+    </div>
+    <button id="lanzar-popup">Abre Popup!!!</button>
+    <div id="popup2" title="¿Estas seguro 2?" style="display: none">
+        <p>Aprenderemos JS</p>
+    </div>
+
+    <hr>
+    <h3>Calendario</h3>
+    <input type="text" id="calendario">
+
+    <hr>
+    <h3>Tabs - Pestañas</h3>
+    <div id="pestanas">
+        <ul>
+            <!-- ponemos un ancla para esa pestaña -->
+            <li><a href="#tabs-1">Pestaña 1</a></li>
+            <li><a href="#tabs-2">Pestaña 2</a></li>
+            <li><a href="#tabs-3">Pestaña 3</a></li>
+            <li><a href="#tabs-4">Pestaña 4</a></li>
+        </ul>
+        <div id="tabs-1">
+            soy la pestaña 1
+        </div>
+        <div id="tabs-2">
+            soy la pestaña 2
+        </div>
+        <div id="tabs-3">
+            soy la pestaña 3
+        </div>
+        <div id="tabs-4">
+            soy la pestaña 4
+        </div>
+    </div>
+</body>
+</html>

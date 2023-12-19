@@ -57,14 +57,17 @@ $(document).ready(function(){
         }, 'slow');
     });
 
-    $('#demoAnimation').click(function(){
-        marginLeft: '550px';
-        top: '300px';
-    });
-    $('#demoAnimation2').click(function(){
-        marginLeft: '700px';
-        top: '450px';
-        height: '300px';
-        width: '300px';
+    let elemento1 = $("#demoAnimation");
+    let elemento2 = $("#demoAnimation2");
+
+    elemento1.on("click", function () {
+        elemento1.animate({
+            left: 550//propiedad:valor (dezplazamiento a la derecha de 150px)
+        }, 1000, //tiempo expresado en milisegundos
+        function () {//funcion callback, es opcional
+            elemento1.animate({
+                top: 250//moverse 150px del top hacia abajo
+            }, 1000);//tiempo expesado en milisegundos
+        });
     });
 });

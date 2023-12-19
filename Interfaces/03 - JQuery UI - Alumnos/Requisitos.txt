@@ -1,0 +1,9 @@
+https://jqueryui.com/
+me descargo la versión estable.
+
+Puedo descargarme la versión custom y elegir qué quiero descargar. Qué métodos,...
+
+Para integrar JQuery UI
+
+- si quiero solo los métodos más básicos (dragable, resizable,...) puedo incluir solamente el JS
+- puedo incluir únicamente y con eso me valdría: jquery-ui.min.js
