@@ -13,7 +13,6 @@ boton.addEventListener("click", function () {
     palabra1 = palabra1.toUpperCase();
     palabra2 = palabra2.toUpperCase();
     
-    //Corto las palabras y las ordeno
     let carPal1 = palabra1.split("").sort().join("");
     let carPal2 = palabra2.split("").sort().join("");
 

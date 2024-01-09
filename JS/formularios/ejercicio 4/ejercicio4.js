@@ -7,9 +7,9 @@ boton.addEventListener("click", function () {
     let opcion = document.getElementById("seleccion").value;
     let resultado = document.getElementById("resultado");
     let resultadoCantidad = 0;
-    if(opcion ==="DolarEuro"){
+    if(opcion === "DolarEuro"){
         resultadoCantidad = (cantidad * 0.83)+" €";
-    }else if(opcion ==="EuroDolar"){
+    }else if(opcion === "EuroDolar"){
         resultadoCantidad = cantidad / 0.83 +" $";
     }
     resultado.value = resultadoCantidad;
