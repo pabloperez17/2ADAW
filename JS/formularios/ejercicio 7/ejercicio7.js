@@ -1,18 +1,31 @@
 Window.onload = function () {
 
-    let texto = document.querySelectorAll("input[type='textarea']")[0];
-    let boton = document.querySelectorAll("input[type='button']")[0];
-
-    boton.addEventListener("click", function(){
+    document.querySelector("input").addEventListener("click",function(ev){
+    
+        ev.preventDefault();
+    
+        let texto = document.querySelector("textarea").value;
         console.log(texto);
-        if(texto.length <= 0){
-            alert("Escribe algo polla")
-        } else if (texto.length > 100){
-            alert("No tan largo socio")
-        } else{
-            let div = document.createElement("div");
-            div.appendChild(texto);
-            document.body.appendChild(div)
+        let midiv = document.createElement("div");
+    
+        if(texto.length<= 50){
+            midiv.textContent = texto;
+            midiv.style.setProperty("color", "blue");
+            document.body.appendChild(midiv);
+        }else{
+            let textobueno = texto.split('',50);
+            textobueno.join('');
+            midiv.textContent = textobueno;
+            midiv.style.setProperty("color", "blue");
+            document.body.appendChild(midiv);
+        } 
+    })
+    
+    document.querySelector("textarea").addEventListener("keydown",function(ev){
+        if(document.querySelector("textarea").value.length>100){
+            document.querySelector("textarea").disabled = true;
+        }else{
+            document.querySelector("textarea").disabled = false;
         }
     })
 }
