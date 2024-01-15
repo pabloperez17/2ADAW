@@ -1,7 +1,6 @@
 function ejercicio1(){
     let g
     let kg
-    let conversion
     do {
         g = prompt("Introduce un peso en gramos");
     } while (g <= 0 || isNaN(g));
@@ -119,7 +118,6 @@ function ejercicio4(){
     console.log("la suma es: " + suma);
     let media;
     media = suma / cont;
-    console.log("La mdeia es: " + media);
+    console.log("La media es: " + media);
 }
-
 
