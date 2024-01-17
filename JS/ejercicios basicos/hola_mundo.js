@@ -158,7 +158,7 @@ console.log(typeof objeto);
 
 
 function Saludar(){
-    console.log("Saludos desde ka función.")
+    console.log("Saludos desde la función.")
 }
 xx = 9;
 yy = 10;
