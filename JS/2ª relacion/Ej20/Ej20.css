@@ -1,0 +1,13 @@
+.clase1{
+    width: 800px;  
+    height: 210px;
+    border: 5px solid red;
+    font-size: 18px;
+}
+
+.clase2{
+    width: 700px;  
+    height: 280px;
+    border: 10px solid blue;
+    font-size: 20px;
+}
