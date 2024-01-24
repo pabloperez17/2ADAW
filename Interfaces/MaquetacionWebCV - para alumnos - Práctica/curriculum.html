@@ -13,9 +13,20 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/responsive.css">    
     
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+
+    <script src=”https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js”></script>
+    <script src=”https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js”></script>
+
     <title>Maquetación Proyecto CV</title>
 </head>
 <body>
+    <div id="popup" title="Titulo certificado 1">
+        ID_Cert_1
+    </div>
     <!-- layout principal. Usamos metodología BEM -->
     <div class="layout">
         <!-- barra lateral (info usuario). -->
@@ -68,6 +79,10 @@
                                 <i class="menu__icon fa-solid fa-envelope"></i>
                                 <span class="menu__overlay">Contacto</span>
                             </a>
+                        </li>
+                        <li class="menu__option">
+                            <button id="oscuro"><i class="fa-solid fa-moon fa-2xl oscuro"></i>
+                            <span class="menu__overlay" id="cambiarSpan">Modo oscuro</span>
                         </li>
                     </ul>
                 </nav>
@@ -176,7 +191,7 @@
                     </section>
                     <section class="resume__right">
                         <header class="resume__subheader">
-                            <h2 class="resume__subtitle">Habilidades de <span class="subtitle__color">Diseño</span></h2>
+                            <h2 class="resume__subtitle">Habilidades de Diseño</h2>
                         </header>
                         <div class="resume__skills">
                             <article class="skills__title">
@@ -217,7 +232,7 @@
                         </div>
 
                         <header class="resume__subheader">
-                            <h2 class="resume__subtitle">Habilidades de <span class="subtitle__color">Código</span></h2>
+                            <h2 class="resume__subtitle">Habilidades de Código</h2>
                         </header>
                         <div class="resume__skills">
                             <article class="skills__title">
@@ -250,7 +265,7 @@
                             </div>
                         </div>
                         <header class="resume__subheader">
-                            <h2 class="resume__subtitle">Áreas de <span class="subtitle__color">Conocimiento</span></h2>
+                            <h2 class="resume__subtitle">Áreas de Conocimiento</h2>
                         </header>
                         <div class="knowledges__list">
                             <ul class="knowledges__list">
@@ -290,6 +305,12 @@
                             </div>
                         </article>
                     </section>
+                    <div id="boton">
+                        <button id="boton_subida">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            <span class="go-top__overlay">Ir Arriba</span>
+                        </button>
+                    </div>
                 </div>
             </section>
         </main>

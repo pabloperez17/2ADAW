@@ -1,4 +1,18 @@
 /* reseteamos estilos */
+#oscuro {
+    border: 0;
+    background-color: transparent;
+    color: var(--color-icons);
+}
+
+#popup{
+    display: none;
+}
+
+#boton{
+    margin-top: 20px;
+    margin-left: 830px;
+}
 *{
     margin: 0px;
     padding: 0px;
@@ -49,7 +63,7 @@ form, input, select, textarea, button, label{
  definimos familia de fuente que voy a utilizar */
 :root{
     --color-principal: #FFFFFF;
-    --color-secondary: #04B4E0;
+    --color-secondary: #53ceff; 
 
     --color-background: #F2F7F9;
     --color-transparent: transparent;
@@ -597,10 +611,10 @@ body{
 .clients_link:hover{
     opacity: 1;
     transform: scale(1.1,1.1);
-    -webkit-transform:;
+    /*-webkit-transform:;
     -moz-transform:;
     -ms-transform:;
-    -o-transform:;
+    -o-transform:;*/
 }
 .clients__image{
     width: 200px;

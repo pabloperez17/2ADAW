@@ -12,7 +12,12 @@
     <link rel="stylesheet" href="css/scroll.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/responsive.css">
-        
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+
     <title>Maquetación Proyecto CV</title>
 </head>
 <body>
@@ -69,6 +74,10 @@
                                 <span class="menu__overlay">Contacto</span>
                             </a>
                         </li>
+                        <li class="menu__option">
+                            <button id="oscuro"><i class="fa-solid fa-moon fa-2xl oscuro"></i>
+                            <span class="menu__overlay" id="cambiarSpan">Modo oscuro</span>
+                        </li>
                     </ul>
                 </nav>
 
@@ -112,6 +121,9 @@
                 <h2 class="page__job">Desarrollador Web</h2>
             </section>
         </main>
+    </div>
+    <div id="dialog" title="CV">
+        Hola amigo, bienvenido a mi curriculum
     </div>
 </body>
 </html>
