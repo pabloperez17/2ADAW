@@ -1,9 +1,4 @@
 /* reseteamos estilos */
-#oscuro {
-    border: 0;
-    background-color: transparent;
-    color: var(--color-icons);
-}
 
 #popup{
     display: none;
@@ -75,6 +70,23 @@ form, input, select, textarea, button, label{
 
     --color-border-reviews: #E5E6E7;
     --color-company: #A5A6A7;
+}
+
+:root.modo_modo_oscuro{
+    --color-principal:#000049;
+    --color-secondary: #d0e6ff;
+
+    --color-background: #030118;
+
+    --color-icons: #B5B6B7;
+    --color-title: #FFFFFF;
+    --color-subtitle: #FFFFFF;
+    --color-text: #FFFFFF;
+
+    --color-border-reviews: #E5E6E7;
+    --color-company: #A5A6A7;
+    --color-textarea:lightgray;
+    --color-letra:black;
 }
 
 /* Estilos Generales */
@@ -965,7 +977,7 @@ body{
     width: 15rem;
     height: 100%;
     padding: 2.5rem;
-    background-color: var(--color-background);
+    background-color: #0301186b;
 }
 .certificate__img{
     width: 100%;
@@ -1142,7 +1154,7 @@ body{
 }
 .article__mask{
     width: 100%;
-    height: 18.5rem;
+    height: 80px;
     overflow: hidden;
 }
 .article__image{
