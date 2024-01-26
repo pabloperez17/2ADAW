@@ -6,8 +6,14 @@
 
 #boton{
     margin-top: 20px;
-    margin-left: 830px;
+    margin-left: 825px;
 }
+
+#boton_subida{
+    background-color: #d0e6ff;
+    color: black;
+}
+
 *{
     margin: 0px;
     padding: 0px;
