@@ -9,7 +9,7 @@
     <form action="" method="post">
         Titulo: <input type="text" name="titulo"><br><br>
         Numero:
-        <select name="limit" id="">
+        <select name="limit">
             <option value="" selcted>Sin limite</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -53,7 +53,7 @@
         $limit = $_POST["limit"];
         $min = $_POST["min"];
         $max = $_POST["max"];
-        //$apiUrl = "https://api.jikan.moe/v4/anime?sfw&q=$titulo&limit=$limit"; Por buscador de nombre con limite
+        //$apiUrl = "https://api.jikan.moe/v4/anime?sfw&q=$titulo&limit=$limit"; //buscador por nombre con limite
         $apiUrl = "https://api.jikan.moe/v4/anime?sfw&q=$titulo&limit=$limit&min_score=$min&max_score=$max"; //busca por nombre con limite y valoracion minima y maxima
 
         $curl = curl_init();
@@ -65,8 +65,11 @@
 
         foreach($animes as $anime){ ?>
             <h1><?php echo $anime['title'] ?></h1>
-            <img src = "<?php echo $anime['images']['jpg']['image_url']; ?>">
+            <p>
+                <a href="show_anime.php?id=<?php echo $anime['mal_id'] ?>">Ver datalles</a>
+            </p>
             <p><?php echo $anime ['score'] ?></p>
+            <img src = "<?php echo $anime['images']['jpg']['image_url'] ?>">
         <?php }
     }
     ?>
