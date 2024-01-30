@@ -1,5 +1,4 @@
 /* reseteamos estilos */
-
 #popup{
     display: none;
 }
@@ -14,6 +13,115 @@
     color: black;
 }
 
+/*menu hamburguesa*/
+.user-info__image_mobile {
+    display: unset;
+    width: 50%;
+    height: 100%;
+    background-color: var(--color-principal);
+    border: 3px solid var(--color-principal);
+    border-radius: 10rem;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
+    overflow: hidden;
+    z-index: 1; 
+  }
+  .mobile-menu {
+    display: none;
+  }
+  
+  .visible {
+    display: block !important;
+  }
+  
+  nav.mobile-menu {
+    position: fixed;
+    box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 1000;
+  }
+  nav.mobile-menu .logo {
+    font-size: 21px;
+    text-decoration: none;
+    color: #cc3535;
+    font-weight: bold;
+  }
+  nav.mobile-menu .mobile-menu-overlay {
+    z-index: 1337;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--color-principal);
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
+  nav.mobile-menu .mobile-menu-overlay ul {
+    position: relative;
+    top: 50%;
+    transform: perspective(1px) translateY(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 36px;
+  }
+  nav.mobile-menu .mobile-menu-overlay ul li {
+    margin-bottom: 24px;
+  }
+  nav.mobile-menu .mobile-menu-overlay ul li a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  
+  .hamburger-menu,
+  .hamburger-menu:after,
+  .hamburger-menu:before {
+    width: 24px;
+    height: 4px;
+    border-radius: 2px;
+  }
+  
+  .hamburger-wrapper {
+    display: block;
+    padding: 12px 0;
+    z-index: 1338;
+  }
+  
+  .hamburger-menu {
+    position: relative;
+    background: var(--color-title);
+    transition: all 0ms 200ms;
+    display: block;
+  }
+  .hamburger-menu.animate {
+    background: var(--color-principal);
+  }
+   
+  .hamburger-menu:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    background: var(--color-title);
+    transition: bottom 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1),
+      transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .hamburger-menu:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    background: var(--color-title);
+    transition: top 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1),
+      transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
 *{
     margin: 0px;
     padding: 0px;

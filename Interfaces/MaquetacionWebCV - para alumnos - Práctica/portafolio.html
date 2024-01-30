@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,27 +12,52 @@
     <link rel="stylesheet" href="fonts/poppins/poppins.css">
     <link rel="stylesheet" href="css/scroll.css">
     <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/responsive.css">    
-    
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+        integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
-    integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    
     <title>Maquetación Proyecto CV</title>
 </head>
+
 <body>
     <!-- layout principal. Usamos metodología BEM -->
     <div class="layout">
+        <nav class="mobile-menu">
+            <a href="#" class="hamburger-wrapper">
+                <div class="hamburger-menu"></div>
+            </a>
+            <div class="mobile-menu-overlay">
+                <ul>
+                    <img src="img/default-user.jpg" class="user-info__image_mobile" alt="" />
+                    <li class="menu__option">
+                        <a class="modo_oscuro">
+                            <i class="menu__icon fa-solid fa-moon fa-house"></i>
+                            <span class="menu__overlay">Modo oscuro</span>
+                        </a>
+                    </li>
+                    <li><a class="menu__link menu__link--active" href="index.html">Home</a></li>
+                    <li><a class="menu__link" href="sobre-mi.html">Sobre mí</a></li>
+                    <li><a class="menu__link" href="curriculum.html">Currículum</a></li>
+                    <li><a class="menu__link" href="portafolio.html">Portafolio</a></li>
+                    <li><a class="menu__link" href="blog.html">Blog</a></li>
+                    <li><a class="menu__link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
         <!-- barra lateral (info usuario). -->
         <aside class="layout__aside">
             <section class="aside__user-info">
@@ -84,7 +110,7 @@
                             </a>
                         </li>
                         <li class="menu__option">
-                            <a id="modo_oscuro">
+                            <a class="modo_oscuro">
                                 <i class="menu__icon fa-solid fa-moon fa-house"></i>
                                 <span class="menu__overlay">Modo modo_oscuro</span>
                             </a>
@@ -119,7 +145,7 @@
                 </div>
 
                 <!-- pié de página -->
-                <footer class="user-info__footer"> 
+                <footer class="user-info__footer">
                     &copy; 2024 Pablo Pérez Iza - Web
                 </footer>
             </section>
@@ -138,7 +164,9 @@
                             <div class="article__category">Juegos</div>
                             <a href="#" class="article__image-link">
                                 <div class="article__mask">
-                                    <img class="article__image" src="https://encrypted-tbn0.gstatic.com/ihttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI8AgUArVKP8lwIABEdm51lU7XtstFdokvvg&usqp=CAUmages?q=tbn:ANd9GcSdd_w_ViLOQTANvn9hf7X9NIvRb9rUmR4ubQ&usqp=CAU" alt="videojugos" />
+                                    <img class="article__image"
+                                        src="https://encrypted-tbn0.gstatic.com/ihttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI8AgUArVKP8lwIABEdm51lU7XtstFdokvvg&usqp=CAUmages?q=tbn:ANd9GcSdd_w_ViLOQTANvn9hf7X9NIvRb9rUmR4ubQ&usqp=CAU"
+                                        alt="videojugos" />
                                 </div>
                                 <div class="article__logo">
                                     <i class="article__icon fa-solid fa-gamepad"></i>
@@ -150,7 +178,9 @@
                                 <h2 class="article__title">Videojugos</h2>
                             </a>
                             <p class="article__text">
-                                Los videojuegos son una forma de entretenimiento que se basa en la interacción del usuario con un programa informático, permitiéndole controlar un personaje o situación virtual.
+                                Los videojuegos son una forma de entretenimiento que se basa en la interacción del
+                                usuario con un programa informático, permitiéndole controlar un personaje o situación
+                                virtual.
                             </p>
                         </div>
                     </div>
@@ -159,7 +189,9 @@
                             <div class="article__category">Padel</div>
                             <a href="#" class="article__image-link">
                                 <div class="article__mask">
-                                    <img class="article__image" src="https://d26itsb5vlqdeq.cloudfront.net//image/3A203E31-AF91-4A97-96F3B23C85C04010" alt="padel" />
+                                    <img class="article__image"
+                                        src="https://d26itsb5vlqdeq.cloudfront.net//image/3A203E31-AF91-4A97-96F3B23C85C04010"
+                                        alt="padel" />
                                 </div>
                                 <div class="article__logo">
                                     <i class="article__icon fa-regular fa-tennis-ball"></i>
@@ -171,7 +203,9 @@
                                 <h2 class="article__title">Pádel</h2>
                             </a>
                             <p class="article__text">
-                                El juego de pádel consiste en pasar la pelota al campo contrario con ayuda de la raqueta. Dos personas se colocan en un campo y otras dos en el otro, y se enfrentan las parejas.
+                                El juego de pádel consiste en pasar la pelota al campo contrario con ayuda de la
+                                raqueta. Dos personas se colocan en un campo y otras dos en el otro, y se enfrentan las
+                                parejas.
                             </p>
                         </div>
                     </div>
@@ -181,7 +215,8 @@
                             <a href="#" class="article__image-link">
                                 <div class="article__mask">
                                     <img class="article__image"
-                                        src="https://encrypted-tbn0.gstatic.com/ihttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqAzD0cFg0gokuZzLIO_veDotqwvyfL0YP0A&usqp=CAUmages?q=tbn:ANd9GcQ6lxwofbB7BSw4wIa_mp68B29wMtOVXTMp7w&usqp=CAUjpg" alt="musica" />
+                                        src="https://encrypted-tbn0.gstatic.com/ihttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqAzD0cFg0gokuZzLIO_veDotqwvyfL0YP0A&usqp=CAUmages?q=tbn:ANd9GcQ6lxwofbB7BSw4wIa_mp68B29wMtOVXTMp7w&usqp=CAUjpg"
+                                        alt="musica" />
                                 </div>
                                 <div class="article__logo">
                                     <i class="article__icon fa-solid fa-music"></i>
@@ -193,7 +228,9 @@
                                 <h2 class="article__title">Musica</h2>
                             </a>
                             <p class="article__text">
-                                La música es la combinación ordenada de ritmo, melodía y armonía que resulta agradable a los oídos. Por su carácter inmaterial, la música se considera un arte temporal o del tiempo.
+                                La música es la combinación ordenada de ritmo, melodía y armonía que resulta agradable a
+                                los oídos. Por su carácter inmaterial, la música se considera un arte temporal o del
+                                tiempo.
                             </p>
                         </div>
                     </div>
@@ -202,7 +239,9 @@
                             <div class="article__category">Fútbol</div>
                             <a href="#" class="article__image-link">
                                 <div class="article__mask">
-                                    <img class="article__image" src="https://www.latercera.com/resizer/TiU6ognMAfRSJQY6u8ie6st5cxU=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/XPCGMOURTVFWXFVHHWKGGWLS2Y.jpg" alt="futbol" />
+                                    <img class="article__image"
+                                        src="https://www.latercera.com/resizer/TiU6ognMAfRSJQY6u8ie6st5cxU=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/XPCGMOURTVFWXFVHHWKGGWLS2Y.jpg"
+                                        alt="futbol" />
                                 </div>
                                 <div class="article__logo">
                                     <i class="article__icon fa-solid fa-futbol"></i>
@@ -216,7 +255,9 @@
                                 </h2>
                             </a>
                             <p class="article__text">
-                                El fútbol es un deporte que se practica entre dos equipos de once jugadores que intentan meter un balón en la portería del contrario dándole con los pies, la cabeza excepto los brazos.
+                                El fútbol es un deporte que se practica entre dos equipos de once jugadores que intentan
+                                meter un balón en la portería del contrario dándole con los pies, la cabeza excepto los
+                                brazos.
                             </p>
                         </div>
                     </div>
@@ -225,7 +266,9 @@
                             <div class="article__category">Deporte</div>
                             <a href="#" class="article__image-link">
                                 <div class="article__mask">
-                                    <img class="article__image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKWJ2m8QK86cYa_DEDtaLR-dIp1QNVHjXeYg&usqp=CAU" alt="deporte" />
+                                    <img class="article__image"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKWJ2m8QK86cYa_DEDtaLR-dIp1QNVHjXeYg&usqp=CAU"
+                                        alt="deporte" />
                                 </div>
                                 <div class="article__logo">
                                     <i class="article__icon fa-solid fa-heart"></i>
@@ -237,7 +280,9 @@
                                 <h2 class="article__title">Deporte</h2>
                             </a>
                             <p class="article__text">
-                                El deporte es una actividad física que realiza una persona o grupo siguiendo ciertas reglas y dentro de un espacio físico determinado. Sirve para mejorar la salud física y mental.
+                                El deporte es una actividad física que realiza una persona o grupo siguiendo ciertas
+                                reglas y dentro de un espacio físico determinado. Sirve para mejorar la salud física y
+                                mental.
                             </p>
                         </div>
                     </div>
@@ -247,7 +292,8 @@
                             <a href="#" class="article__image-link">
                                 <div class="article__mask">
                                     <img class="article__image"
-                                        src="https://statics-cuidateplus.marca.com/cms/styles/natural/azblob/dormir-solo.jpg.webp?itok=xp2RlgCU" alt="dormir" />
+                                        src="https://statics-cuidateplus.marca.com/cms/styles/natural/azblob/dormir-solo.jpg.webp?itok=xp2RlgCU"
+                                        alt="dormir" />
                                 </div>
                                 <div class="article__logo">
                                     <i class="article__icon fa-solid fa-bed"></i>
@@ -259,13 +305,16 @@
                                 <h2 class="article__title">Dormir</h2>
                             </a>
                             <p class="article__text">
-                                Dormir es el acto de reposar en un estado inconsciente en el que se produce la suspensión de las funciones sensoriales y de los movimientos voluntarios del cuerpo completo.
+                                Dormir es el acto de reposar en un estado inconsciente en el que se produce la
+                                suspensión de las funciones sensoriales y de los movimientos voluntarios del cuerpo
+                                completo.
                             </p>
                         </div>
                     </div>
-                </div>              
+                </div>
             </section>
         </main>
     </div>
 </body>
+
 </html>

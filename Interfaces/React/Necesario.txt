@@ -1,0 +1,11 @@
+-Extensiones
+NodeJS
+node --version
+npm --version
+
+Para crear un proyecto vamos a poder realizarlo en:
+1o Create React App
+2o Vite
+
+Crear un proyecto:
+npx create-react-app {Nombre carpeta sin Capitalice}

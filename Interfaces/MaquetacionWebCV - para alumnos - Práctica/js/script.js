@@ -3,12 +3,15 @@ $(document).ready(() => {
     //Fecha
     $('#date').datepicker();
 
+    //Tabs
+    $('#acordeon').tabs();
+
     //Efecto para el cambio de pagina html
     $('.layout').effect('bounce', { times: 2 }, 1500, () => {
     });
-    
+
     //Modo modo_oscuro
-    $('#modo_oscuro').click(() => {
+    $('.modo_oscuro').click(() => {
         localStorage.setItem('tema_modo_oscuro', !$(':root').hasClass('modo_modo_oscuro'));
         cambiarTema();
     });
@@ -18,30 +21,25 @@ $(document).ready(() => {
     $('#popup').hide();
     $('.certificates__certificate').click(() => {
         $('#popup').dialog();
-    }); 
-    
+    });
+
     //Barra de subir
-    $('#boton_subida').on('click', function() {
+    $('#boton_subida').on('click', function () {
         $('.content__page').animate({
             scrollTop: 0
         }, 800);
         return false;
     });
-    
+
     //Menu hamburguesa
-    /*(function () {
-        $('.user-info_general').on('click', function() {
-            $('.user-info__container-image').toggleClass('animate');
-            $('.layout_menu').toggleClass('visible');
-        })
-        $('.layout_menu > ul > li > a').on('click', function () {
-            $('.user-info__container-image').removeClass('animate');
-            $('.layout_menu').removeClass('visible');
-        })
-    })();*/
+    $('.hamburger-wrapper').on('click', () => {
+        $('.hamburger-menu').toggleClass('animate');
+        $('.mobile-menu-overlay').toggleClass('visible');
+    });
 
 });
 
+//Carrusel
 $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
         loop: true,
@@ -63,12 +61,12 @@ $(document).ready(function () {
 
 const cambiarTema = () => {
     if (!localStorage.getItem('tema_modo_oscuro') || localStorage.getItem('tema_modo_oscuro') === 'false') {
-      $(':root').removeClass('modo_modo_oscuro');
-      $('#modo_oscuro i').addClass('fa-moon').removeClass('fa-sun');
-      $('#modo_oscuro span').text('Modo modo_oscuro');
+        $(':root').removeClass('modo_modo_oscuro');
+        $('.modo_oscuro i').addClass('fa-moon').removeClass('fa-sun');
+        $('.modo_oscuro span').text('Modo modo_oscuro');
     } else {
-      $(':root').addClass('modo_modo_oscuro');
-      $('#modo_oscuro i').addClass('fa-sun').removeClass('fa-moon');
-      $('#modo_oscuro span').text('Modo Claro');
+        $(':root').addClass('modo_modo_oscuro');
+        $('.modo_oscuro i').addClass('fa-sun').removeClass('fa-moon');
+        $('.modo_oscuro span').text('Modo Claro');
     }
-  }
+}

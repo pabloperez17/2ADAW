@@ -67,6 +67,9 @@
     .layout__menu{
         position: static; /* el elemento ya no me aparece visible */
     }
+    .mobile-menu {
+        display: flex;
+      }
 }
 
 @media (max-width: 800px){
