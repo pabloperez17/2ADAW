@@ -66,7 +66,7 @@
         foreach($animes as $anime){ ?>
             <h1><?php echo $anime['title'] ?></h1>
             <p>
-                <a href="show_anime.php?id=<?php echo $anime['mal_id'] ?>">Ver datalles</a>
+                <a href="show_anime.php?id=<?php echo $anime['mal_id'] ?>">Ver detalles</a>
             </p>
             <p><?php echo $anime ['score'] ?></p>
             <img src = "<?php echo $anime['images']['jpg']['image_url'] ?>">

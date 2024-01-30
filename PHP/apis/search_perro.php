@@ -3,26 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search perro</title>
+    <title>Search dog</title>
 </head>
 <body>
     <form action="" method="post">
-        Nombre:
-        <select name="nombre">
-            <?php
-                for($i = 0; $i < 98 ;$i++){ ?>
-                    <option value ="<?php echo $i ?>"><?php echo $i ?>
-                    </option>
-                <?php } ?>
-            ?>
-        </select><br><br>
-        <input type="submit" value="Buscar">
+    <h2>Elige raza</h2>
+    <select name="perros">
+
+    <?php 
+       $apiUrl = "https://dog.ceo/api/breeds/list/all";
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, $apiUrl);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        $respuesta = curl_exec($curl);
+        $array = json_decode($respuesta, true);
+        $dogs = $array['message'];
+        foreach($dogs as  $nombreClave => $dog) { 
+            if (count($dog) > 0) {
+                for ($i = 0; $i < count($dog); $i++ ) {
+                    $nombreTotal = $dog[$i] . " " . $nombreClave;
+                    $nombreTotalValue =  $nombreClave . "/" . $dog[$i];
+                    ?> <option value="<?php echo $nombreTotalValue ?>"><?php echo $nombreTotal?></option> <?php
+                }
+            } else {
+                ?> <option value="<?php echo $nombreClave ?>"><?php echo $nombreClave?></option> <?php
+            }
+        }
+
+    ?>  
+    </select>
+    <br><br>
+    <input type="submit" value="Buscar">
     </form>
 
     <?php
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-        $nombre = $_POST["nombre"];
 
+    // Verifica si el formulario ha sido enviado usando el método POST
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    //Raza del perro que me piden en el select 
+    $razaPerro = $_POST["perros"];
+
+    $apiUrl = "https://dog.ceo/api/breed/$razaPerro/images/random";
+
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $apiUrl);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    $respuesta = curl_exec($curl);
+    $array = json_decode($respuesta, true);
+
+    $imagen = $array['message'];
+
+    ?>
+    <img src="<?php echo $imagen?>" alt="">
+    <?php
     }
     ?>
 </body>

@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-    $apiUrl = "https://dog.ceo/api/breeds/list/all";
+    $apiUrl = "https://dog.ceo/api/breeds/image/random";
 
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_URL, $apiUrl);
