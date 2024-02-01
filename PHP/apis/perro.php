@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-    $apiUrl = "https://dog.ceo/api/breeds/image/random";
+    $apiUrl = "https://api.chucknorris.io/jokes/random?category={category}";
 
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_URL, $apiUrl);
@@ -16,7 +16,7 @@
     $array = json_decode($respuesta, true);
 
     ?>
-    <h1><?php echo "Tu perro aleatorio" ?></h1>
+    <h1><?php echo "Tu chiste aleatorio aleatorio" ?></h1>
     <img src = "<?php echo $array['message'] ?>">
 </body>
 </html>

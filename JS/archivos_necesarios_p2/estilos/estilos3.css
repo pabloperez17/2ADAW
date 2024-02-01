@@ -1,0 +1,54 @@
+body{
+    background-color: #DDD;
+    padding:  1px;
+    font-family: "verdana";
+}
+
+section{
+    width: 1150px;
+    overflow:  hidden;
+    padding: 15px;
+    margin:  75px auto; 
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+article{
+    width: 530px;
+    border: 4px solid #AAA;
+    overflow:  hidden;
+    padding-top: 0;
+    border-radius: 20px;
+
+    margin: 15px;
+    background-color: #CECECE;
+}
+
+
+article h2{
+    padding: 5px;
+    background-color: #AAA;
+    text-align: center;
+    font-size:  1.2em;
+    margin:  0;
+    color:  white;
+    text-shadow: 1px 1px black;
+}
+
+article p{
+    padding: 8px;
+    line-height: 1.5;
+}
+
+
+
+.imagen{
+    display:  block;
+    border-radius:  10px;
+    margin: 5px auto;
+    margin-bottom: 25px;
+    border:  4px solid #999;
+}
+
