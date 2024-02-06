@@ -8,7 +8,7 @@ $DB="academia";
 $conexion = new mysqli($HOST,$USER,$PASS,$DB);
 
 if($conexion->connect_errno){
-    echo "Fallor: ".$conexion->connect_error;
+    echo "Fallo: ".$conexion->connect_error;
     exit();
 }
 
