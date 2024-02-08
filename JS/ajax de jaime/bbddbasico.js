@@ -17,9 +17,8 @@ document.querySelector("button").onclick = function (e) {
   console.log(nicoFD);
 
   //FORMA 2: todos los campos del formulario
-  /*
+/*
   let nicoFD = new FormData(formu);
-
   console.log(nicoFD);
 */
   //1 - creo el objeto
