@@ -21,9 +21,6 @@ function muestra_alumnos(datos) {
 }
 
 
-
-
-
 function solicitar_datos(url, pagina_actual){
 	if(window.XMLHttpRequest){
 		xhr = new XMLHttpRequest();
